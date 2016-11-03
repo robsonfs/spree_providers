@@ -7,7 +7,7 @@ Introduction goes here.
 
 1. Add this extension to your Gemfile with this line:
   ```ruby
-  gem 'spree_providers', github: '[your-github-handle]/spree_providers', branch: 'X-X-stable'
+  gem 'spree_providers', github: 'robsonfs/spree_providers', branch: '3-1-stable'
   ```
 
   The `branch` option is important: it must match the version of Spree you're using.
