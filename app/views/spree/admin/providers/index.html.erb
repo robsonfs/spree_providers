@@ -1,1 +1,31 @@
-<h1>Index providers view</h1>
+<% content_for :page_title do %>
+  <%= plural_resource_name(Spree::Provider) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_provider), new_object_url, { class: "btn-success", icon: 'add', id: 'admin_new_provider' } %>
+<% end if can?(:create, Spree::Provider) %>
+
+<% if @collection.any? %>
+  <table class="table" id="listing_providers">
+    <thead>
+      <tr data-hook="admin_providers_index_headers">
+        <th><%= Spree.t(:name) %></th>
+        <th><%= Spree.t(:official_doc) %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @collection.each do |provider| %>
+          <tr id="<%= spree_dom_id provider %>" data-hook="admin_providers_index_rows" class="<%= cycle('odd', 'even') %>">
+            <td class="name"><%= provider.name rescue '' %></td>
+            <td class="CNPJ"><%= provider.cnpj %> </td>
+          </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <div class="alert alert-info no-objects-found">
+    <%= Spree.t(:no_resource_found, resource: plural_resource_name(Spree::Provider)) %>,
+    <%= link_to Spree.t(:add_one), new_object_url %>!
+  </div>
+<% end %>

@@ -1,5 +1,5 @@
 class Spree::Admin::ProvidersController < Spree::Admin::ResourceController
   def index
-    #code
+    @collection = Spree::Provider.all
   end
 end

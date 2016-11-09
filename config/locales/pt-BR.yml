@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    attributes:
+      spree/provider:
+        name: "Nome"
+    models:
+      spree/provider:
+        one: Fornecedor
+        other: Fornecedores
+  spree:
+    new_provider: Novo Fornecedor
+    official_doc: CNPJ
