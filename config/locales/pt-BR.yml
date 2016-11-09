@@ -3,10 +3,15 @@ pt-BR:
     attributes:
       spree/provider:
         name: "Nome"
+        country_doc: CNPJ
+        state_doc: "Inscrição Estadual"
+        phone: Telefone
+        created_at: Criado em
+        updated_at: Atualizado em
+        address: Endereço
     models:
       spree/provider:
         one: Fornecedor
         other: Fornecedores
   spree:
     new_provider: Novo Fornecedor
-    official_doc: CNPJ
