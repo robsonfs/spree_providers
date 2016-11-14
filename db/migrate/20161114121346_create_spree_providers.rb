@@ -12,7 +12,7 @@ class CreateSpreeProviders < ActiveRecord::Migration
       t.string :estado
       t.string :cep
       t.string :telefone
-      t.decimal :lucro, , precision: 4, scale: 2
+      t.decimal :lucro, precision: 4, scale: 2
 
       t.timestamps null: false
     end
