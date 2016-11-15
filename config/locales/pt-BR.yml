@@ -1,5 +1,11 @@
 pt-BR:
   activerecord:
+    errors:
+      models:
+        spree/provider:
+          attributes:
+            cnpj_cpf:
+              cnpj_or_cpf_invalid: Informe um CNPJ ou CPF válidos
     attributes:
       spree/provider:
         nome_fantasia: "Nome Fantasia"
