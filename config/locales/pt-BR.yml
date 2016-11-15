@@ -2,16 +2,15 @@ pt-BR:
   activerecord:
     attributes:
       spree/provider:
-        name: "Nome"
-        country_doc: CNPJ
-        state_doc: "Inscrição Estadual"
-        phone: Telefone
-        created_at: Criado em
-        updated_at: Atualizado em
-        address: Endereço
+        nome_fantasia: "Nome Fantasia"
     models:
       spree/provider:
         one: Fornecedor
         other: Fornecedores
   spree:
+    providers: Fornecedores
     new_provider: Novo Fornecedor
+    nome_fantasia: Nome Fantasia
+    cnpj_cpf: "CNPJ / CPF"
+    created_at: Criado em
+    updated_at: Atualizado em

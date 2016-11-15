@@ -10,15 +10,21 @@
   <table class="table" id="listing_providers">
     <thead>
       <tr data-hook="admin_providers_index_headers">
-        <th><%= Spree.t(:name) %></th>
-        <th><%= Spree.t(:official_doc) %></th>
+        <th><%= Spree.t(:nome_fantasia) %></th>
+        <th><%= Spree.t(:cnpj_cpf) %></th>
+        <th><%= Spree.t(:lucro) %></th>
+        <th><%= Spree.t(:created_at) %></th>
+        <th><%= Spree.t(:updated_at) %></th>
       </tr>
     </thead>
     <tbody>
       <% @collection.each do |provider| %>
           <tr id="<%= spree_dom_id provider %>" data-hook="admin_providers_index_rows" class="<%= cycle('odd', 'even') %>">
-            <td class="name"><%= provider.name rescue '' %></td>
-            <td class="CNPJ"><%= provider.cnpj %> </td>
+            <td class="nome_fantasia"><%= provider.nome_fantasia rescue '' %></td>
+            <td class="cnpj_cpf"><%= provider.cnpj_cpf %> </td>
+            <td class="lucro"><%= provider.lucro %> </td>
+            <td class="created_at"><%= l(provider.created_at, format: :short)%> </td>
+            <td class="updated_at"><%= l(provider.updated_at, format: :short) %> </td>
           </tr>
       <% end %>
     </tbody>
