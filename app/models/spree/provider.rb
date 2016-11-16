@@ -5,7 +5,7 @@ class Spree::Provider < ActiveRecord::Base
   validate :validate_cpf_cnpj
 
   # Associations
-  has_many :spree_products
+  has_many :products
 
   private
   def validate_cpf_cnpj
