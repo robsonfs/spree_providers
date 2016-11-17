@@ -20,7 +20,7 @@
     <tbody>
       <% @collection.each do |provider| %>
           <tr id="<%= spree_dom_id provider %>" data-hook="admin_providers_index_rows" class="<%= cycle('odd', 'even') %>">
-            <td class="nome_fantasia"><%= provider.nome_fantasia rescue '' %></td>
+            <td class="nome_fantasia"><%= link_to provider.nome_fantasia, object_url(provider.id) %></td>
             <td class="cnpj_cpf"><%= provider.cnpj_cpf %> </td>
             <td class="lucro"><%= provider.lucro %> </td>
             <td class="created_at"><%= l(provider.created_at, format: :short)%> </td>

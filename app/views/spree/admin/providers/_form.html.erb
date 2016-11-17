@@ -1,0 +1,104 @@
+
+<div data-hook="admin_product_form_fields">
+
+  <div class="row">
+
+    <div class="col-md-8" data-hook="admin_product_form_left">
+      <div data-hook="admin_product_form_name">
+        <%= f.field_container :nome_fantasia, class: ['form-group'] do %>
+          <%= f.label :nome_fantasia, raw(Spree.t(:nome_fantasia) + content_tag(:span, ' *', class: 'required')) %>
+          <%= f.text_field :nome_fantasia, class: 'form-control title' %>
+          <%= f.error_message_on :nome_fantasia %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_razao_social">
+        <%= f.field_container :razao_social, class: ['form-group'] do %>
+          <%= f.label :razao_social, raw(Spree.t(:razao_social) + content_tag(:span, ' *', class: "required")) %>
+          <%= f.text_field :razao_social, class: 'form-control title' %>
+          <%= f.error_message_on :razao_social %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_cnpj_cpf">
+        <%= f.field_container :cnpj_cpf, class: ['form-group'] do %>
+          <%= f.label :cnpj_cpf, raw(Spree.t(:cnpj_cpf) + content_tag(:span, ' *', class: "required")) %>
+          <%= f.text_field :cnpj_cpf, class: 'form-control title' %>
+          <%= f.error_message_on :cnpj_cpf %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_endereco">
+        <%= f.field_container :endereco, class: ['form-group'] do %>
+          <%= f.label :endereco, raw(Spree.t(:endereco) + content_tag(:span, ' *', class: "required")) %>
+          <%= f.text_field :endereco, class: 'form-control title' %>
+          <%= f.error_message_on :endereco %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_endereco_numero">
+        <%= f.field_container :endereco_numero, class: ['form-group'] do %>
+          <%= f.label :endereco_numero, raw(Spree.t(:endereco_numero) + content_tag(:span, ' *', class: "required")) %>
+          <%= f.text_field :endereco_numero, class: 'form-control title' %>
+          <%= f.error_message_on :endereco_numero %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_endereco_complemento">
+        <%= f.field_container :endereco_complemento, class: ['form-group'] do %>
+          <%= f.label :endereco_complemento, raw(Spree.t(:endereco_complemento) + content_tag(:span, ' *', class: "required")) %>
+          <%= f.text_field :endereco_complemento, class: 'form-control title' %>
+          <%= f.error_message_on :endereco_complemento %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_bairro">
+        <%= f.field_container :bairro, class: ['form-group'] do %>
+          <%= f.label :bairro, raw(Spree.t(:bairro) + content_tag(:span, ' *', class: "required")) %>
+          <%= f.text_field :bairro, class: 'form-control title' %>
+          <%= f.error_message_on :bairro %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_cidade">
+        <%= f.field_container :cidade, class: ['form-group'] do %>
+          <%= f.label :cidade, raw(Spree.t(:cidade) + content_tag(:span, ' *', class: "required")) %>
+          <%= f.text_field :cidade, class: 'form-control title' %>
+          <%= f.error_message_on :cidade %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_estado">
+        <%= f.field_container :estado, class: ['form-group'] do %>
+          <%= f.label :estado, raw(Spree.t(:estado) + content_tag(:span, ' *', class: "required")) %>
+          <%= f.text_field :estado, class: 'form-control title' %>
+          <%= f.error_message_on :estado %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_cep">
+        <%= f.field_container :cep, class: ['form-group'] do %>
+          <%= f.label :cep, raw(Spree.t(:cep) + content_tag(:span, ' *', class: "required")) %>
+          <%= f.text_field :cep, class: 'form-control title' %>
+          <%= f.error_message_on :cep %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_telefone">
+        <%= f.field_container :telefone, class: ['form-group'] do %>
+          <%= f.label :telefone, raw(Spree.t(:telefone) + content_tag(:span, ' *', class: "required")) %>
+          <%= f.text_field :telefone, class: 'form-control title' %>
+          <%= f.error_message_on :telefone %>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_lucro">
+        <%= f.field_container :lucro, class: ['form-group'] do %>
+          <%= f.label :lucro, raw(Spree.t(:lucro) + content_tag(:span, ' *', class: "required")) %>
+          <%= f.text_field :lucro, class: 'form-control title' %>
+          <%= f.error_message_on :lucro %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
