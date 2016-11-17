@@ -1,9 +1,7 @@
-<% content_for :page_actions do %>
-  <h1><%= link_to plural_resource_name(Spree::Provider), admin_providers_path %> /
-    <%= @provider.nome_fantasia %>
-  </h1>
 
-<% end %>
+<h2><%= link_to plural_resource_name(Spree::Provider), admin_providers_path %> /
+  <%= @provider.nome_fantasia %>
+</h2>
 
 <%= render partial: 'spree/admin/shared/error_messages', locals: { target: @provider } %>
 

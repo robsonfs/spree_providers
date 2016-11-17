@@ -1,0 +1,15 @@
+<% content_for :page_actions do %>
+  <h1><%= link_to plural_resource_name(Spree::Provider), admin_providers_path %> /
+    <%= @provider.nome_fantasia %>
+  </h1>
+
+<% end %>
+
+<%= render partial: 'spree/admin/shared/error_messages', locals: { target: @provider } %>
+
+<%= form_for [:admin, @provider], method: :post, html: { multipart: true } do |f| %>
+  <fieldset>
+    <%= render partial: 'form', locals: { f: f } %>
+    <%= render partial: 'spree/admin/shared/new_resource_links' %>
+  </fieldset>
+<% end %>
